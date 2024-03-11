@@ -1,0 +1,29 @@
+.matrixStyle{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    direction: ltr;
+}
+
+.matrixStyle:before,
+.matrixStyle:after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  border-color: #646cff;
+  border-style: solid;
+  width: 10px;
+  top: -1px;
+}
+.matrixStyle:before {
+  left: -2px;
+  border-width: 2px 0px 2px 2px;
+}.matrixStyle:after {
+  right: -2px;
+  border-width: 2px 2px 2px 0px;
+}
+
+.cell{
+    width: 50px;
+    margin: 5px;
+}
