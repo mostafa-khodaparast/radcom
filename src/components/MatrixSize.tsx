@@ -21,7 +21,6 @@ function MatrixSize({ setMatrixSize }: { setMatrixSize: MatrixSizeProps }) {
                         <input
                             id="row"
                             type='number'
-                            
                             {...register('row',
                                 {
                                     required: 'وارد کردن سطر اجباریست',
@@ -32,6 +31,10 @@ function MatrixSize({ setMatrixSize }: { setMatrixSize: MatrixSizeProps }) {
                                     max: {
                                         value: 10,
                                         message: 'حداکثر ده سطر مقدور است'
+                                    },
+                                    pattern: {
+                                        value: /^[0-9]*$/,
+                                        message: 'عدد صحیح وارد کنید'
                                     }
                                 }
                             )}
@@ -57,6 +60,10 @@ function MatrixSize({ setMatrixSize }: { setMatrixSize: MatrixSizeProps }) {
                                     max: {
                                         value: 10,
                                         message: 'حداکثر ده ستون مقدور است'
+                                    },
+                                    pattern: {
+                                        value: /^[0-9]*$/,
+                                        message: 'عدد صحیح وارد کنید'
                                     }
                                 }
                             )}
