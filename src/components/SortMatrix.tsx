@@ -6,9 +6,9 @@ function SortMatrix({ matrix, mathMatrix }) {
     if (matrix) {
         matrix.map((row: [], rowIndex: number) => {
             if (rowIndex % 2 == 0) {
-                matrix[rowIndex] = row.sort((a, b) => a - b)
-            } else {
                 matrix[rowIndex] = row.sort((a, b) => b - a)
+            } else {
+                matrix[rowIndex] = row.sort((a, b) => a - b)
             }
         })
     }
