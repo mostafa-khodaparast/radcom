@@ -62,3 +62,15 @@ input:focus {
   color: #FF6961;
   font-size: 1rem;
 }
+
+.show {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .show {
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+}

@@ -27,6 +27,7 @@ function MakeMatrix({ matrixSize, setMatrix }) {
         setMatrix(matrix)
     }
 
+    
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -47,7 +48,7 @@ function MakeMatrix({ matrixSize, setMatrix }) {
                         </div>
                     )
                 })}
-                {matrixSize.row && matrixSize.col && <button>ذخیره ماتریکس</button>}
+                {matrixSize.row && matrixSize.col && <button>مرتب سازی</button>}
             </form>
         </div>
     )

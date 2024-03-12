@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Header, MakeMatrix, MatrixSize } from './components'
-import './App.css'
+import { Header, MakeMatrix, MatrixSize, SortMatrix } from './components'
 import { renderMathMatrix } from './utils'
-import {BlockMath} from 'react-katex'
-
+import './App.css'
 
 
 function App() {
@@ -12,18 +10,19 @@ function App() {
   const [matrix, setMatrix] = useState()
   const [mathMatrix, setMathMatrix] = useState()
 
-  
+
   useEffect(() => {
     setMathMatrix(renderMathMatrix(matrix))
   }, [matrix])
-  
+
+
 
   return (
     <>
       <Header />
       <MatrixSize setMatrixSize={setMatrixSize} />
       <MakeMatrix matrixSize={matrixSize} setMatrix={setMatrix} />
-      {matrixSize.col && matrixSize.row && <BlockMath math={"A = " + mathMatrix} />}
+      <SortMatrix matrix={matrix} mathMatrix={mathMatrix} />
     </>
   )
 }
