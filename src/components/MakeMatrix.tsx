@@ -40,7 +40,7 @@ function MakeMatrix({ matrixSize, setMatrix }) {
                                         className={styles.cell}
                                         key={indexRow + " " + indexColumn}
                                         type="number"
-                                        step="0.01"
+                                        step="0.1"
                                         defaultValue={0}
                                         name={indexRow + "," + indexColumn}
                                     />

@@ -21,6 +21,7 @@ function MatrixSize({ setMatrixSize }: { setMatrixSize: MatrixSizeProps }) {
                         <input
                             id="row"
                             type='number'
+                            
                             {...register('row',
                                 {
                                     required: 'وارد کردن سطر اجباریست',
