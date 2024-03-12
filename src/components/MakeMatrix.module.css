@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     position: relative;
-   
+   direction: ltr;
 }
 
 .matrixStyle:before,
